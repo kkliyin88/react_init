@@ -1,6 +1,15 @@
+
 import React from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
+import TodoList from './page/todoList/index.js'
+import zhCN from 'antd/es/locale-provider/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+import 'antd/dist/antd.css';
+moment.locale('zhCN');
+
 function Header(props) { 
   return (
     <div>
@@ -38,6 +47,7 @@ function App() {
         </a>
         <Header name='李铟' msg='组件定义很简单啊'></Header>
         <Home name='liyin'></Home>
+		<TodoList ></TodoList>
       </header>
     </div>
   );
